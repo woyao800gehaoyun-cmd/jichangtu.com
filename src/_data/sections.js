@@ -2,8 +2,31 @@ export default [
   {
     slug: 'airport', title: '机场推荐', eyebrow: 'Service Directory', icon: 'globe',
     description: '按清晰维度收录和整理服务资料，预留筛选、评测、教程与状态更新入口。',
-    intro: '本页是后续“全部机场”目录的结构底座。正式内容可按使用场景、平台支持、信息完整度与最近核验时间组织，不使用模糊的绝对化排名。',
+    intro: '本页用于集中整理机场服务入口。推荐顺序不代表绝对排名，服务价格、套餐、线路与可用性可能随时变化，请在访问服务方页面后自行核验。',
     entries: ['全部服务索引', '新手选择入口', '多设备场景', '平台支持筛选', '近期更新', '常见问题'],
+    providers: [
+      {
+        name: '光年梯',
+        mark: '光',
+        label: '推广链接',
+        description: '查看光年梯的服务页面、当前套餐与注册信息，具体内容以服务方页面为准。',
+        url: 'https://Rumors.gntaff.com/#/?code=Mclks3w5',
+      },
+      {
+        name: '云图机场',
+        mark: '云',
+        label: '推广链接',
+        description: '查看云图机场的服务页面、当前套餐与注册信息，具体内容以服务方页面为准。',
+        url: 'https://super.ytjcok.org/#/register?code=COsTypDq',
+      },
+      {
+        name: '鲲鹏加速',
+        mark: '鲲',
+        label: '推广链接',
+        description: '查看鲲鹏加速的服务页面、当前套餐与注册信息，具体内容以服务方页面为准。',
+        url: 'https://kunpengjiasu.com/#/register?code=Yd7XpCEQ',
+      },
+    ],
   },
   {
     slug: 'reviews', title: '机场评测', eyebrow: 'Independent Reviews', icon: 'shield',
