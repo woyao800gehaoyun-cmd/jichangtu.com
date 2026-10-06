@@ -1,9 +1,12 @@
+import airportKeywords from './airportKeywords.js';
+
 export default [
   {
     slug: 'airport', title: '机场推荐', eyebrow: 'Service Directory', icon: 'globe',
     description: '按清晰维度收录和整理服务资料，预留筛选、评测、教程与状态更新入口。',
     intro: '本页用于集中整理机场服务入口。推荐顺序不代表绝对排名，服务价格、套餐、线路与可用性可能随时变化，请在访问服务方页面后自行核验。',
     entries: ['全部服务索引', '新手选择入口', '多设备场景', '平台支持筛选', '近期更新', '常见问题'],
+    keywordGroups: airportKeywords,
     providers: [
       {
         name: '光年梯',
