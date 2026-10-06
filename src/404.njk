@@ -1,0 +1,10 @@
+---
+layout: layouts/base.njk
+title: 页面未找到
+description: 你访问的页面不存在或已经移动。
+noindex: true
+permalink: /404.html
+eleventyExcludeFromCollections: true
+---
+{% from "macros/icon.njk" import icon %}
+<section class="container-shell grid min-h-[68vh] place-items-center py-20 text-center"><div><span class="text-8xl font-black tracking-tighter text-brand-100 sm:text-9xl">404</span><h1 class="-mt-4 text-3xl font-bold tracking-tight text-ink-950">这里暂时没有内容</h1><p class="mx-auto mt-4 max-w-md text-sm leading-7 text-ink-500">页面可能已经移动，或者链接地址有误。你可以返回首页，或前往文章索引继续浏览。</p><div class="mt-8 flex flex-wrap justify-center gap-3"><a href="/" class="inline-flex items-center gap-2 rounded-xl bg-ink-950 px-5 py-3 text-sm font-semibold text-white">返回首页</a><a href="/blog/" class="inline-flex items-center gap-2 rounded-xl border border-line bg-white px-5 py-3 text-sm font-semibold text-ink-700">文章索引 {{ icon('arrow', 16) }}</a></div></div></section>

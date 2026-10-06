@@ -1,0 +1,20 @@
+export default {
+  name: '机场图',
+  shortName: '机场图',
+  tagline: '中文网络工具与数字生活指南',
+  description: '面向中文用户的网络工具内容站，提供服务评测、客户端教程、工具下载、横向对比与数字生活指南。',
+  url: 'https://jichangtu.com',
+  language: 'zh-CN',
+  locale: 'zh_CN',
+  author: '机场图编辑部',
+  email: 'hello@example.com',
+  currentYear: new Date().getFullYear(),
+  defaultSchemaJson: JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: '机场图',
+    url: 'https://jichangtu.com',
+    description: '面向中文用户的网络工具内容站，提供服务评测、客户端教程、工具下载、横向对比与数字生活指南。',
+    inLanguage: 'zh-CN',
+  }),
+};

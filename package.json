@@ -1,0 +1,25 @@
+{
+  "name": "jichangtu-eleventy-blog",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "clean": "node scripts/clean.mjs",
+    "dev": "concurrently --kill-others \"npm:dev:css\" \"npm:dev:site\"",
+    "dev:css": "npx @tailwindcss/cli -i ./src/assets/css/main.css -o ./_site/assets/css/main.css --watch",
+    "dev:site": "eleventy --serve",
+    "build:css": "npx @tailwindcss/cli -i ./src/assets/css/main.css -o ./_site/assets/css/main.css --minify",
+    "build": "npm run clean && npm run build:css && eleventy",
+    "start": "npm run dev",
+    "check": "eleventy --dryrun"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "latest",
+    "@11ty/eleventy-plugin-rss": "latest",
+    "@tailwindcss/cli": "latest",
+    "tailwindcss": "latest"
+  },
+  "devDependencies": {
+    "concurrently": "latest"
+  }
+}

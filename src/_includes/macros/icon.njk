@@ -1,0 +1,27 @@
+{% macro icon(name, size=20, className='', strokeWidth='1.8') %}
+<svg class="{{ className }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="{{ strokeWidth }}" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  {% if name == 'arrow' %}<path d="M5 12h14M13 6l6 6-6 6"/>
+  {% elif name == 'arrow-up-right' %}<path d="M7 17 17 7M7 7h10v10"/>
+  {% elif name == 'book' %}<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/>
+  {% elif name == 'search' %}<circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/>
+  {% elif name == 'shield' %}<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/>
+  {% elif name == 'layers' %}<path d="m12 2 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5M3 17l9 5 9-5"/>
+  {% elif name == 'compare' %}<path d="M8 3 4 7l4 4M4 7h16M16 21l4-4-4-4M20 17H4"/>
+  {% elif name == 'tag' %}<path d="M20.6 13.6 11 23l-9-9V4h10l8.6 8.6a1.4 1.4 0 0 1 0 2Z"/><circle cx="7" cy="9" r="1.3"/>
+  {% elif name == 'help' %}<circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 1 1 4.8 2.4c-1.2.8-1.9 1.3-1.9 2.6M12 18h.01"/>
+  {% elif name == 'sparkles' %}<path d="m12 3-1.3 3.7L7 8l3.7 1.3L12 13l1.3-3.7L17 8l-3.7-1.3L12 3Z"/><path d="m5 14-.8 2.2L2 17l2.2.8L5 20l.8-2.2L8 17l-2.2-.8L5 14ZM19 14l-.8 2.2L16 17l2.2.8L19 20l.8-2.2L22 17l-2.2-.8L19 14Z"/>
+  {% elif name == 'grid' %}<rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>
+  {% elif name == 'clock' %}<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>
+  {% elif name == 'calendar' %}<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/>
+  {% elif name == 'chevron' %}<path d="m9 18 6-6-6-6"/>
+  {% elif name == 'check' %}<path d="m5 12 4 4L19 6"/>
+  {% elif name == 'menu' %}<path d="M4 7h16M4 12h16M4 17h16"/>
+  {% elif name == 'close' %}<path d="m6 6 12 12M18 6 6 18"/>
+  {% elif name == 'download' %}<path d="M12 3v12M7 10l5 5 5-5M5 21h14"/>
+  {% elif name == 'monitor' %}<rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+  {% elif name == 'bot' %}<rect x="4" y="7" width="16" height="13" rx="3"/><path d="M12 3v4M8 12h.01M16 12h.01M8 16h8"/>
+  {% elif name == 'play' %}<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m10 9 5 3-5 3V9Z"/>
+  {% elif name == 'globe' %}<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>
+  {% else %}<path d="m12 3-1.3 3.7L7 8l3.7 1.3L12 13l1.3-3.7L17 8l-3.7-1.3L12 3Z"/>{% endif %}
+</svg>
+{% endmacro %}

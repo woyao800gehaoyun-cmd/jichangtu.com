@@ -1,0 +1,11 @@
+---
+layout: layouts/base.njk
+title: 即将离开本站
+description: 外部链接跳转提示页。
+noindex: true
+permalink: /go/example/index.html
+eleventyExcludeFromCollections: true
+---
+{% from "macros/icon.njk" import icon %}
+<div class="border-b border-line bg-paper/70"><nav class="container-shell flex items-center gap-2 py-5 text-xs text-ink-500"><a href="/">首页</a><span>›</span><span class="text-ink-700">外部链接提示</span></nav></div>
+<section class="container-shell grid min-h-[62vh] place-items-center py-20"><div class="w-full max-w-xl rounded-[2rem] border border-line bg-white p-7 text-center shadow-soft sm:p-12"><span class="mx-auto grid size-16 place-items-center rounded-2xl bg-brand-50 text-brand-600">{{ icon('arrow-up-right', 28) }}</span><h1 class="mt-6 text-3xl font-bold tracking-tight text-ink-950">即将离开本站</h1><p class="mt-4 text-sm leading-7 text-ink-500">你将前往“示例外部页面”。当前页面仅用于展示安全跳转页结构，尚未配置真实外部地址。</p><div class="mt-7 rounded-xl bg-paper px-4 py-3 text-xs text-ink-500">外部网站的内容、隐私政策与可用性由其自身负责。</div><div class="mt-8 flex flex-wrap justify-center gap-3"><a href="/" class="rounded-xl border border-line px-5 py-3 text-sm font-semibold text-ink-700">返回首页</a><span class="rounded-xl bg-ink-300 px-5 py-3 text-sm font-semibold text-white">暂未开放</span></div></div></section>

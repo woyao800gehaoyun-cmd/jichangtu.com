@@ -1,0 +1,18 @@
+{% from "macros/icon.njk" import icon %}
+<footer class="border-t border-line bg-[#0b1020] text-white">
+  <div class="container-shell py-16 lg:py-20">
+    <div class="grid gap-12 border-b border-white/10 pb-14 lg:grid-cols-[1.2fr_2fr]">
+      <div class="max-w-sm">
+        <a href="/" class="inline-flex items-center gap-3"><span class="grid size-10 place-items-center rounded-xl bg-white text-sm font-black text-ink-950">图</span><span class="text-xl font-bold tracking-tight">{{ site.name }}</span></a>
+        <p class="mt-5 text-sm leading-7 text-slate-400">{{ site.description }}</p>
+        <div class="mt-6 flex items-center gap-2 text-xs text-slate-500">{{ icon('shield', 16) }} 独立整理 · 持续更新 · 清晰标注</div>
+      </div>
+      <div class="grid grid-cols-2 gap-8 sm:grid-cols-3">
+        <div><h2 class="text-sm font-semibold">内容分类</h2><ul class="mt-4 space-y-3 text-sm text-slate-400"><li><a href="/airport/" class="hover:text-white">机场推荐</a></li><li><a href="/reviews/" class="hover:text-white">评测文章</a></li><li><a href="/guides/" class="hover:text-white">教程中心</a></li><li><a href="/downloads/" class="hover:text-white">工具下载</a></li></ul></div>
+        <div><h2 class="text-sm font-semibold">专题入口</h2><ul class="mt-4 space-y-3 text-sm text-slate-400"><li><a href="/ai-tools/" class="hover:text-white">AI 工具</a></li><li><a href="/streaming/" class="hover:text-white">流媒体工具</a></li><li><a href="/apple-id/" class="hover:text-white">免费苹果 ID</a></li><li><a href="/free-nodes/" class="hover:text-white">免费节点</a></li></ul></div>
+        <div><h2 class="text-sm font-semibold">重要页面</h2><ul class="mt-4 space-y-3 text-sm text-slate-400"><li><a href="/blog/" class="hover:text-white">全部文章</a></li><li><a href="/topics/" class="hover:text-white">专题聚合</a></li><li><a href="/brands/" class="hover:text-white">品牌资料库</a></li><li><a href="/about/" class="hover:text-white">关于我们</a></li></ul></div>
+      </div>
+    </div>
+    <div class="mt-8 grid gap-5 text-xs leading-6 text-slate-500 md:grid-cols-[1fr_auto] md:items-end"><div><p>免责声明：本站内容仅用于信息整理与技术交流，不构成购买、投资或服务承诺。请读者遵守所在地法律法规并自行判断。</p><p class="mt-2">部分页面可能预留合作或跳转位置，正式上线时将明确标注相关关系。</p></div><p class="md:text-right">© {{ site.currentYear }} {{ site.name }}. 保留所有权利。</p></div>
+  </div>
+</footer>

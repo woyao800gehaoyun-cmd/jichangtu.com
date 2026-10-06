@@ -1,0 +1,25 @@
+{% from "macros/icon.njk" import icon %}
+<header class="sticky top-0 z-50 border-b border-white/70 bg-white/82 backdrop-blur-xl" data-site-header>
+  <div class="container-shell flex h-[var(--header-height)] items-center justify-between gap-5">
+    <a href="/" class="focus-ring flex shrink-0 items-center gap-2.5 rounded-lg" aria-label="{{ site.name }}首页">
+      <span class="grid size-9 place-items-center rounded-xl bg-ink-950 text-sm font-black text-white shadow-lg shadow-indigo-950/15">图</span>
+      <span class="flex flex-col leading-none"><strong class="text-[1.05rem] tracking-tight text-ink-950">{{ site.name }}</strong><small class="mt-1 hidden text-[0.58rem] font-semibold tracking-[0.12em] text-ink-500 sm:block">DIGITAL GUIDE</small></span>
+    </a>
+    <nav class="hidden items-center gap-0.5 xl:flex" aria-label="主导航">
+      {% for item in navigation %}
+        <a href="{{ item.url }}" class="focus-ring rounded-lg px-2 py-2 text-[0.78rem] font-medium transition hover:bg-paper hover:text-brand-600 {% if page.url | startsWith(item.url) %}bg-brand-50 text-brand-600{% else %}text-ink-700{% endif %}" {% if page.url | startsWith(item.url) %}aria-current="page"{% endif %}>{{ item.label }}</a>
+      {% endfor %}
+    </nav>
+    <div class="flex shrink-0 items-center gap-2">
+      <a href="/blog/" class="focus-ring hidden items-center gap-2 rounded-xl bg-ink-950 px-4 py-2.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-brand-600 lg:flex">{{ icon('search', 16) }}内容索引</a>
+      <button class="focus-ring grid size-10 place-items-center rounded-xl border border-line bg-white text-ink-900 xl:hidden" type="button" aria-expanded="false" aria-controls="mobile-nav" data-menu-button><span class="sr-only">打开导航</span>{{ icon('menu', 21, 'menu-open') }}{{ icon('close', 21, 'menu-close hidden') }}</button>
+    </div>
+  </div>
+  <div id="mobile-nav" class="hidden border-t border-line bg-white xl:hidden" data-mobile-nav>
+    <nav class="container-shell grid max-h-[calc(100vh-4.75rem)] gap-1 overflow-y-auto py-4" aria-label="移动端导航">
+      {% for item in navigation %}<a href="{{ item.url }}" class="rounded-xl px-3 py-3 text-sm font-medium {% if page.url | startsWith(item.url) %}bg-brand-50 text-brand-600{% else %}text-ink-700 hover:bg-paper{% endif %}">{{ item.label }}</a>{% endfor %}
+      <div class="my-2 h-px bg-line"></div>
+      <a href="/blog/" class="rounded-xl bg-ink-950 px-3 py-3 text-center text-sm font-semibold text-white">浏览全部文章</a>
+    </nav>
+  </div>
+</header>
