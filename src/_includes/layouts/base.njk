@@ -9,7 +9,7 @@
     <meta name="description" content="{{ description or site.description }}">
     <link rel="canonical" href="{{ page.url | absoluteUrl(site.url) }}">
     <link rel="icon" type="image/svg+xml" href="{{ page.url | relativeAsset('favicon.svg') }}">
-    <link rel="stylesheet" href="{{ page.url | relativeAsset('assets/css/main.css') }}">
+    <link rel="stylesheet" href="{{ page.url | relativeAsset('assets/css/main.css') }}?v={{ site.assetVersion }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} RSS" href="{{ '/rss.xml' | absoluteUrl(site.url) }}">
     {% if noindex %}<meta name="robots" content="noindex,nofollow">{% endif %}
     <meta property="og:type" content="{{ ogType or 'website' }}">
@@ -29,7 +29,7 @@
     {% include "partials/header.njk" %}
     <main id="main-content">{{ content | safe }}</main>
     {% include "partials/footer.njk" %}
-    <script src="{{ page.url | relativeAsset('assets/js/site.js') }}" defer></script>
-    {% if pageScript %}<script src="{{ page.url | relativeAsset(pageScript) }}" defer></script>{% endif %}
+    <script src="{{ page.url | relativeAsset('assets/js/site.js') }}?v={{ site.assetVersion }}" defer></script>
+    {% if pageScript %}<script src="{{ page.url | relativeAsset(pageScript) }}?v={{ site.assetVersion }}" defer></script>{% endif %}
   </body>
 </html>
