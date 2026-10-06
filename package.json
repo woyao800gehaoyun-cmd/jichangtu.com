@@ -11,7 +11,8 @@
     "build:css": "npx @tailwindcss/cli -i ./src/assets/css/main.css -o ./_site/assets/css/main.css --minify",
     "build": "npm run clean && npm run build:css && eleventy",
     "start": "npm run dev",
-    "check": "eleventy --dryrun"
+    "check": "eleventy --dryrun",
+    "deploy": "npm run build && wrangler deploy"
   },
   "dependencies": {
     "@11ty/eleventy": "latest",
@@ -20,6 +21,7 @@
     "tailwindcss": "latest"
   },
   "devDependencies": {
-    "concurrently": "latest"
+    "concurrently": "latest",
+    "wrangler": "latest"
   }
 }
