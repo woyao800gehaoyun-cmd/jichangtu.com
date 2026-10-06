@@ -7,8 +7,8 @@ permalink: /blog/index.html
 ---
 {% from "macros/icon.njk" import icon %}
 {% from "macros/cards.njk" import articleCard %}
-<div class="border-b border-line bg-paper/70"><nav class="container-shell flex items-center gap-2 py-5 text-xs text-ink-500" aria-label="面包屑"><a href="/">首页</a><span>›</span><span class="text-ink-700">文章索引</span></nav></div>
-<section class="container-shell py-14 sm:py-20">
+<div class="border-b border-line bg-[#faf8f3]"><nav class="container-shell flex items-center gap-2 py-5 text-xs text-ink-500" aria-label="面包屑"><a href="/">首页</a><span>›</span><span class="text-ink-700">文章索引</span></nav></div>
+<section class="paper-texture border-b border-line"><div class="container-shell py-14 sm:py-20">
   <div class="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end"><div class="max-w-3xl"><span class="eyebrow">Article Library</span><h1 class="mt-4 text-[clamp(2.5rem,6vw,4.7rem)] font-black tracking-[-0.055em] text-ink-950">文章索引</h1><p class="mt-5 max-w-2xl text-base leading-8 text-ink-500">按分类查看机场推荐、选择指南、线路协议、客户端教程与故障排查文章。每篇内容围绕一个明确问题展开，并通过内链连接相关主题。</p></div><div class="rounded-2xl border border-line bg-white px-5 py-4 shadow-sm"><span class="text-xs text-ink-500">当前已收录</span><strong class="ml-2 text-2xl font-black text-ink-950">{{ collections.posts.length }}</strong><span class="ml-1 text-xs text-ink-500">篇</span></div></div>
   {% set categories = collections.posts | pluck('data.category') | unique %}
   <div class="mt-12 flex flex-col gap-5 border-y border-line py-5 sm:flex-row sm:items-center sm:justify-between">
@@ -17,5 +17,5 @@ permalink: /blog/index.html
   </div>
   <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3" data-post-grid>{% for post in collections.posts %}<div data-post-item data-category="{{ post.data.category }}" data-search-text="{{ post.data.title }} {{ post.data.description }} {{ post.data.tags | join(' ') }}">{{ articleCard(post, loop.index0) }}</div>{% endfor %}</div>
   <div class="mt-12 hidden rounded-2xl border border-dashed border-line bg-paper p-10 text-center" data-empty><p class="text-sm font-semibold text-ink-900">没有找到匹配的文章</p><p class="mt-2 text-xs text-ink-500">请尝试更换分类或减少搜索词。</p></div>
-  <div class="mt-16 grid gap-5 rounded-3xl bg-ink-950 p-6 text-white sm:grid-cols-[1fr_auto] sm:items-center sm:p-9"><div><h2 class="text-xl font-bold">不知道从哪里开始？</h2><p class="mt-2 text-sm leading-6 text-slate-400">从专题聚合页按阅读顺序查看同一主题下的内容。</p></div><a href="/topics/" class="focus-ring inline-flex items-center gap-2 rounded-xl bg-white px-4 py-3 text-sm font-semibold text-ink-950">浏览专题 {{ icon('arrow', 16) }}</a></div>
-</section>
+  <div class="mt-16 grid gap-5 rounded-3xl border border-[#40534a] bg-[#273c34] p-6 text-white shadow-soft sm:grid-cols-[1fr_auto] sm:items-center sm:p-9"><div><h2 class="text-xl font-bold">不知道从哪里开始？</h2><p class="mt-2 text-sm leading-6 text-[#c7d1cc]">从新手选择指南或专题聚合页，按顺序理解选择、配置和排错。</p></div><div class="flex flex-wrap gap-3"><a href="/blog/airport-selection-guide/" class="focus-ring inline-flex items-center gap-2 rounded-xl bg-white px-4 py-3 text-sm font-semibold text-ink-950">新手指南 {{ icon('arrow', 16) }}</a><a href="/topics/" class="focus-ring inline-flex items-center gap-2 rounded-xl border border-white/20 px-4 py-3 text-sm font-semibold">浏览专题</a></div></div>
+</div></section>

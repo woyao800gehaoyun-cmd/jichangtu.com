@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#F5F2EB">
     {% set fullTitle = site.name + '｜' + site.tagline if isHome else title + '｜' + site.name %}
     <title>{{ fullTitle }}</title>
     <meta name="description" content="{{ description or site.description }}">
@@ -23,7 +24,7 @@
     <meta name="twitter:description" content="{{ description or site.description }}">
     <script type="application/ld+json">{% if schemaJson %}{{ schemaJson | safe }}{% else %}{{ site.defaultSchemaJson | safe }}{% endif %}</script>
   </head>
-  <body>
+  <body class="paper-texture">
     <a href="#main-content" class="fixed left-4 top-3 z-[100] -translate-y-20 rounded-lg bg-ink-950 px-4 py-2 text-sm text-white transition focus:translate-y-0">跳到主要内容</a>
     {% include "partials/header.njk" %}
     <main id="main-content">{{ content | safe }}</main>

@@ -1,0 +1,23 @@
+---
+layout: layouts/base.njk
+title: 联系我们
+description: 通过 Telegram 联系机场图，提交内容勘误、资料更新、收录建议或合作咨询。
+permalink: /contact/index.html
+---
+{% from "macros/icon.njk" import icon %}
+{% from "macros/cards.njk" import faq %}
+<div class="border-b border-line bg-[#faf8f3]"><nav class="container-shell flex items-center gap-2 py-5 text-xs text-ink-500" aria-label="面包屑"><a href="/">首页</a><span>›</span><span class="text-ink-700">联系我们</span></nav></div>
+
+<section class="paper-texture relative overflow-hidden border-b border-line"><div class="absolute right-[8%] top-10 size-80 rounded-full bg-[#fed7aa]/45 blur-3xl"></div><div class="container-shell relative grid gap-12 py-16 lg:grid-cols-[1fr_.7fr] lg:items-center lg:py-24"><div class="max-w-3xl"><span class="eyebrow">Contact</span><h1 class="mt-5 text-[clamp(2.7rem,6vw,5rem)] font-bold leading-[1.08] tracking-[-0.05em] text-ink-950">联系我们</h1><p class="mt-6 max-w-2xl text-base leading-8 text-ink-500 sm:text-lg">欢迎提交文章勘误、入口更新、工具收录建议和合作咨询。为提高处理效率，请附上具体页面地址与问题说明。</p><div class="mt-9 flex flex-wrap gap-3"><a href="{{ site.telegramUrl }}" target="_blank" rel="noopener noreferrer" class="focus-ring inline-flex items-center gap-2 rounded-xl bg-brand-600 px-5 py-3.5 text-sm font-semibold text-white shadow-card transition hover:bg-brand-700">打开 Telegram：{{ site.telegram }} {{ icon('arrow-up-right', 17) }}</a><a href="/about/" class="focus-ring inline-flex items-center gap-2 rounded-xl border border-line bg-white px-5 py-3.5 text-sm font-semibold text-ink-700 shadow-card">了解内容原则</a></div></div><div class="rounded-[2rem] border border-line bg-white p-7 shadow-soft"><span class="grid size-14 place-items-center rounded-2xl bg-forest-50 text-forest-600">{{ icon('arrow-up-right', 26) }}</span><p class="mt-6 text-xs font-bold tracking-[.12em] text-brand-600">TELEGRAM</p><h2 class="mt-2 text-3xl font-bold text-ink-950">{{ site.telegram }}</h2><p class="mt-4 text-sm leading-7 text-ink-500">通常用于内容反馈、资料更新、收录建议和商务合作。请勿发送账号密码、订阅链接、验证码或付款资料。</p></div></div></section>
+
+<section class="section-space bg-[#faf8f3]"><div class="container-shell"><div class="max-w-2xl"><span class="eyebrow">How to Contact</span><h2 class="mt-3 text-3xl font-bold text-ink-950">怎样提交信息更容易处理</h2><p class="mt-4 text-sm leading-7 text-ink-500">一条完整的信息通常包含页面、问题、证据和希望采取的处理方式。</p></div><div class="mt-10 grid gap-5 md:grid-cols-3"><article class="rounded-3xl border border-line bg-white p-6 shadow-card"><span class="text-xs font-bold text-brand-600">01 / 内容勘误</span><h3 class="mt-5 text-xl font-bold text-ink-950">指出具体页面与段落</h3><p class="mt-3 text-sm leading-7 text-ink-500">附上文章地址、错误位置、正确内容与可核验来源，避免只发送一张缺少上下文的截图。</p></article><article class="rounded-3xl border border-line bg-white p-6 shadow-card"><span class="text-xs font-bold text-brand-600">02 / 资料收录</span><h3 class="mt-5 text-xl font-bold text-ink-950">提供官方资料与适用场景</h3><p class="mt-3 text-sm leading-7 text-ink-500">说明项目或服务名称、官方地址、主要用途、限制条件以及希望收录到哪个栏目。</p></article><article class="rounded-3xl border border-line bg-white p-6 shadow-card"><span class="text-xs font-bold text-brand-600">03 / 合作咨询</span><h3 class="mt-5 text-xl font-bold text-ink-950">提前说明合作关系</h3><p class="mt-3 text-sm leading-7 text-ink-500">介绍合作对象、内容范围、落地页面和披露方式。本站不会接受要求隐藏推广关系的合作。</p></article></div></div></section>
+
+<section class="border-y border-line bg-paper py-16 lg:py-20"><div class="container-shell grid gap-10 lg:grid-cols-[.7fr_1.3fr]"><div><span class="eyebrow">Privacy</span><h2 class="mt-3 text-3xl font-bold text-ink-950">联系时请保护隐私</h2></div><div class="grid gap-4 text-sm leading-7 text-ink-500"><p>请勿发送机场订阅链接、账号密码、双重认证验证码、付款信息、身份证件或其他敏感资料。排查问题时，可以提供经过遮挡的错误提示、客户端名称、系统版本和问题发生时间。</p><p>第三方服务的退款、账号恢复和订单问题应优先联系对应服务方。本站可以协助整理公开信息，但不能代替第三方客服处理账户或资金事项。</p></div></div></section>
+
+{% set contactFaqs = [
+  { question: '唯一公开的联系渠道是什么？', answer: '当前公开联系渠道为 Telegram：@rumors6688。请核对用户名拼写，谨防仿冒账号。' },
+  { question: '提交内容后多久会回复？', answer: '回复时间取决于问题类型和核验难度。信息越完整，通常越容易快速处理。' },
+  { question: '可以申请收录机场或工具吗？', answer: '可以，但请同时提供官方入口、基本介绍、适用场景和需要披露的合作关系。收录不等于推荐。' },
+  { question: '可以发送订阅链接帮助排错吗？', answer: '不要发送个人订阅链接。建议提供客户端、系统版本、错误提示和已完成的排查步骤。' }
+] %}
+<section class="section-space bg-[#faf8f3]"><div class="container-shell"><div class="mx-auto mb-10 max-w-2xl text-center"><span class="eyebrow">FAQ</span><h2 class="mt-3 text-3xl font-bold text-ink-950">联系常见问题</h2></div>{{ faq(contactFaqs) }}</div></section>

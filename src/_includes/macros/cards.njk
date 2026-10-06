@@ -1,11 +1,11 @@
 {% from "macros/icon.njk" import icon %}
 
 {% macro articleCard(post, index=0) %}
-{% set palettes = ['from-[#e9edff] via-[#f5f7ff] to-[#e5f8f5]', 'from-[#e8f7f5] via-[#f8fbff] to-[#edf0ff]', 'from-[#f2ecff] via-[#faf8ff] to-[#e9f5ff]', 'from-[#fff1e7] via-[#fffaf5] to-[#edf3ff]'] %}
+{% set palettes = ['from-[#f7e7d3] via-[#fffaf4] to-[#e4eee7]', 'from-[#e4eee7] via-[#faf8f3] to-[#f6eadb]', 'from-[#eee8df] via-[#fffdf8] to-[#f3ddc2]', 'from-[#f8e9d8] via-[#fffaf4] to-[#dfeae3]'] %}
 <article class="group surface-card flex h-full flex-col overflow-hidden transition duration-300 hover:-translate-y-1.5 hover:border-brand-100 hover:shadow-soft">
   <a href="{{ post.url }}" class="focus-ring relative block aspect-[16/9] overflow-hidden bg-gradient-to-br {{ palettes[index % 4] }}" aria-label="阅读：{{ post.data.title }}">
-    <div class="absolute inset-0 opacity-60" style="background-image:radial-gradient(circle at 80% 20%,rgba(67,97,238,.18),transparent 28%),linear-gradient(rgba(255,255,255,.4) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.4) 1px,transparent 1px);background-size:auto,28px 28px,28px 28px"></div>
-    <div class="absolute inset-0 flex items-center justify-center"><div class="relative grid size-20 place-items-center rounded-[1.6rem] border border-white/70 bg-white/65 text-brand-600 shadow-xl shadow-indigo-950/10 backdrop-blur-md transition duration-500 group-hover:rotate-3 group-hover:scale-105">{{ icon('book' if index % 3 == 0 else ('layers' if index % 3 == 1 else 'compare'), 32) }}</div></div>
+    <div class="absolute inset-0 opacity-60" style="background-image:radial-gradient(circle at 80% 20%,rgba(217,119,6,.16),transparent 28%),linear-gradient(rgba(255,255,255,.45) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.45) 1px,transparent 1px);background-size:auto,28px 28px,28px 28px"></div>
+    <div class="absolute inset-0 flex items-center justify-center"><div class="relative grid size-20 place-items-center rounded-[1.6rem] border border-white/80 bg-white/72 text-brand-600 shadow-card backdrop-blur-md transition duration-500 group-hover:rotate-3 group-hover:scale-105">{{ icon('book' if index % 3 == 0 else ('layers' if index % 3 == 1 else 'compare'), 32) }}</div></div>
     <span class="absolute left-5 top-5 rounded-full border border-white/70 bg-white/75 px-3 py-1 text-xs font-semibold text-ink-700 backdrop-blur">{{ post.data.category }}</span>
   </a>
   <div class="flex flex-1 flex-col p-6">

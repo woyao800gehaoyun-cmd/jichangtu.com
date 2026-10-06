@@ -5,7 +5,8 @@ export default [
   { label: '客户端下载', url: '/downloads/' },
   { label: 'AI 工具', url: '/ai-tools/' },
   { label: '流媒体工具', url: '/streaming/' },
-  { label: '免费苹果 ID', url: '/apple-id/' },
+  { label: '苹果 ID 指南', url: '/apple-id/' },
   { label: '免费节点', url: '/free-nodes/' },
   { label: '关于我们', url: '/about/' },
+  { label: '联系我们', url: '/contact/' },
 ];
