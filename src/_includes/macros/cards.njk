@@ -1,12 +1,12 @@
 {% from "macros/icon.njk" import icon %}
 
 {% macro articleCard(post, index=0) %}
-{% set palettes = ['from-[#f7e7d3] via-[#fffaf4] to-[#e4eee7]', 'from-[#e4eee7] via-[#faf8f3] to-[#f6eadb]', 'from-[#eee8df] via-[#fffdf8] to-[#f3ddc2]', 'from-[#f8e9d8] via-[#fffaf4] to-[#dfeae3]'] %}
+{% set covers = ['/images/cover-compass.svg', '/images/cover-devices.svg', '/images/cover-network.svg', '/images/cover-shield.svg'] %}
 <article class="group surface-card flex h-full flex-col overflow-hidden transition duration-300 hover:-translate-y-1.5 hover:border-brand-100 hover:shadow-soft">
-  <a href="{{ post.url }}" class="focus-ring relative block aspect-[16/9] overflow-hidden bg-gradient-to-br {{ palettes[index % 4] }}" aria-label="阅读：{{ post.data.title }}">
-    <div class="absolute inset-0 opacity-60" style="background-image:radial-gradient(circle at 80% 20%,rgba(217,119,6,.16),transparent 28%),linear-gradient(rgba(255,255,255,.45) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.45) 1px,transparent 1px);background-size:auto,28px 28px,28px 28px"></div>
-    <div class="absolute inset-0 flex items-center justify-center"><div class="relative grid size-20 place-items-center rounded-[1.6rem] border border-white/80 bg-white/72 text-brand-600 shadow-card backdrop-blur-md transition duration-500 group-hover:rotate-3 group-hover:scale-105">{{ icon('book' if index % 3 == 0 else ('layers' if index % 3 == 1 else 'compare'), 32) }}</div></div>
-    <span class="absolute left-5 top-5 rounded-full border border-white/70 bg-white/75 px-3 py-1 text-xs font-semibold text-ink-700 backdrop-blur">{{ post.data.category }}</span>
+  <a href="{{ post.url }}" class="focus-ring relative block aspect-[16/9] overflow-hidden bg-[#efe8dc]" aria-label="阅读：{{ post.data.title }}">
+    <img src="{{ covers[index % 4] }}" alt="" width="800" height="450" loading="lazy" decoding="async" class="absolute inset-0 h-full w-full object-cover transition duration-700 ease-out group-hover:scale-[1.035]">
+    <div class="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-[#292524]/12 to-transparent"></div>
+    <span class="absolute left-5 top-5 rounded-full border border-white/80 bg-white/82 px-3 py-1 text-xs font-semibold text-ink-700 shadow-sm backdrop-blur">{{ post.data.category }}</span>
   </a>
   <div class="flex flex-1 flex-col p-6">
     <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-ink-500"><span class="flex items-center gap-1.5">{{ icon('calendar', 14) }}{{ post.date | dateZh }}</span><span>·</span><span class="flex items-center gap-1.5">{{ icon('clock', 14) }}{{ post.data.readingTime }}</span>{% if post.data.updatedAt %}<span class="rounded-md bg-paper px-2 py-1">更新 {{ post.data.updatedAt | dateZh }}</span>{% endif %}</div>

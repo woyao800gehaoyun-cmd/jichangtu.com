@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" fill="none">
+  <defs>
+    <linearGradient id="wash" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F5F2EB"/>
+      <stop offset=".48" stop-color="#F7E7D3"/>
+      <stop offset="1" stop-color="#DDEBE2"/>
+    </linearGradient>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="8" result="noise"/>
+      <feColorMatrix in="noise" type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 .055"/></feComponentTransfer>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#wash)"/>
+  <path d="M-90 705C132 554 263 662 441 549C646 419 781 527 957 428C1157 316 1291 383 1694 153" stroke="#D97706" stroke-opacity=".16" stroke-width="2"/>
+  <path d="M-86 746C143 587 282 708 465 583C650 456 800 572 983 464C1169 354 1326 429 1685 214" stroke="#D97706" stroke-opacity=".12" stroke-width="2"/>
+  <path d="M-66 788C178 632 314 743 501 623C697 497 839 620 1022 510C1210 397 1351 486 1679 282" stroke="#D97706" stroke-opacity=".09" stroke-width="2"/>
+  <path d="M115 46C274 157 413 115 546 214C713 339 832 237 1008 341C1180 443 1330 361 1538 482" stroke="#047857" stroke-opacity=".12" stroke-width="2"/>
+  <path d="M74 8C258 136 410 82 567 188C721 292 857 206 1034 310C1212 415 1368 325 1588 454" stroke="#047857" stroke-opacity=".08" stroke-width="2"/>
+  <g opacity=".44">
+    <circle cx="1227" cy="253" r="135" stroke="#047857" stroke-opacity=".18"/>
+    <circle cx="1227" cy="253" r="96" stroke="#047857" stroke-opacity=".16"/>
+    <circle cx="1227" cy="253" r="55" stroke="#047857" stroke-opacity=".14"/>
+    <path d="M1144 253H1310M1227 170V336" stroke="#047857" stroke-opacity=".12"/>
+  </g>
+  <g fill="#D97706">
+    <circle cx="263" cy="632" r="5" fill-opacity=".46"/>
+    <circle cx="440" cy="550" r="5" fill-opacity=".32"/>
+    <circle cx="650" cy="488" r="5" fill-opacity=".28"/>
+  </g>
+  <g fill="#047857">
+    <circle cx="1009" cy="341" r="5" fill-opacity=".28"/>
+    <circle cx="1227" cy="253" r="7" fill-opacity=".45"/>
+    <circle cx="1416" cy="395" r="5" fill-opacity=".28"/>
+  </g>
+  <rect width="1600" height="900" filter="url(#grain)" opacity=".7"/>
+</svg>

@@ -9,7 +9,7 @@ export default {
   author: '机场图编辑部',
   telegram: '@rumors6688',
   telegramUrl: 'https://t.me/rumors6688',
-  assetVersion: '20261006-warm-clay',
+  assetVersion: '20261007-nordic-visuals',
   currentYear: new Date().getFullYear(),
   defaultSchemaJson: JSON.stringify({
     '@context': 'https://schema.org',
