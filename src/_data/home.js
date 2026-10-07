@@ -14,9 +14,10 @@ export default {
     { title: '故障诊断与提速', description: '处理订阅导入失败、节点不显示、网页打不开、延迟高和晚高峰变慢。', count: 3, url: '/blog/airport-troubleshooting/', icon: 'layers', accent: 'bg-[#fef3c7] text-[#92400e]' },
   ],
   brands: [
-    { name: '光年梯', label: '推广入口', description: '服务入口 / 套餐核验 / 风险提示', mark: '光', url: 'https://Rumors.gntaff.com/#/?code=Mclks3w5', external: true },
-    { name: '云图机场', label: '推广入口', description: '服务入口 / 注册信息 / 使用说明', mark: '云', url: 'https://super.ytjcok.org/#/register?code=COsTypDq', external: true },
-    { name: '鲲鹏加速', label: '推广入口', description: '服务入口 / 套餐信息 / 最近核验', mark: '鲲', url: 'https://kunpengjiasu.com/#/register?code=Yd7XpCEQ', external: true },
+    { name: '光年梯', label: '本站主推', description: '¥18 / 120G / IEPL / GNT80', mark: '光', url: '/blog/guangnianti-review/' },
+    { name: '云图机场', label: '测评入口', description: '¥18 / 100G / IEPL / yt88', mark: '云', url: '/blog/yuntu-review/' },
+    { name: '鲲鹏加速', label: '测评入口', description: '¥12 / 直连 / 暂无优惠码', mark: '鲲', url: '/blog/kunpeng-review/' },
+    { name: '瞬云机场', label: '测评入口', description: '¥18 / 100G / IPLC / 20OFF', mark: '瞬', url: '/blog/shunyun-review/' },
     { name: 'Clash 客户端', label: '知识条目', description: '订阅格式 / 平台选择 / 导入排错', mark: 'C', url: '/blog/airport-protocol-client-guide/' },
     { name: 'Shadowrocket', label: '知识条目', description: 'iOS 客户端 / 订阅导入 / 常见问题', mark: 'S', url: '/blog/airport-device-platform-guide/' },
     { name: 'sing-box', label: '知识条目', description: '协议生态 / 客户端差异 / 配置边界', mark: 'S', url: '/blog/airport-protocol-client-guide/' },

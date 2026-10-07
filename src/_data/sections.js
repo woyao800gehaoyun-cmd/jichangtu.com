@@ -16,9 +16,10 @@ export default [
     ],
     keywordGroups: airportKeywords,
     providers: [
-      { name: '光年梯', mark: '光', label: '推广链接', description: '查看光年梯的服务页面、当前套餐与注册信息，具体内容以服务方页面为准。', url: 'https://Rumors.gntaff.com/#/?code=Mclks3w5' },
-      { name: '云图机场', mark: '云', label: '推广链接', description: '查看云图机场的服务页面、当前套餐与注册信息，具体内容以服务方页面为准。', url: 'https://super.ytjcok.org/#/register?code=COsTypDq' },
-      { name: '鲲鹏加速', mark: '鲲', label: '推广链接', description: '查看鲲鹏加速的服务页面、当前套餐与注册信息，具体内容以服务方页面为准。', url: 'https://kunpengjiasu.com/#/register?code=Yd7XpCEQ' },
+      { name: '光年梯', mark: '光', label: '本站主推 · 推广链接', featured: true, price: '¥18 / 月', traffic: '120G / 月', line: 'IEPL 专线', coupon: 'GNT80', description: '18 元月付提供 120G 流量，在四个候选项中流量更充足；IEPL 专线定位适合重视晚高峰连续性、日常视频与多场景使用的读者。', reviewUrl: '/blog/guangnianti-review/', url: 'https://Rumors.gntaff.com/#/?code=Mclks3w5' },
+      { name: '云图机场', mark: '云', label: '推广链接', price: '¥18 / 月', traffic: '100G / 月', line: 'IEPL 专线', coupon: 'yt88', description: '18 元月付提供 100G 流量，采用 IEPL 专线定位，适合流量需求适中、希望兼顾线路与预算的用户。', reviewUrl: '/blog/yuntu-review/', url: 'https://super.ytjcok.org/#/register?code=COsTypDq' },
+      { name: '鲲鹏加速', mark: '鲲', label: '推广链接', price: '¥12 / 月', traffic: '以服务页为准', line: '直连线路', coupon: '暂无', description: '12 元月付，是价格更低的直连机场候选项。优势是入门成本较低，实际高峰表现更依赖所在地与运营商路由。', reviewUrl: '/blog/kunpeng-review/', url: 'https://kunpengjiasu.com/#/register?code=Yd7XpCEQ' },
+      { name: '瞬云机场', mark: '瞬', label: '推广链接', price: '¥18 / 月', traffic: '100G / 月', line: 'IPLC 专线', coupon: '20OFF', description: '18 元月付提供 100G 流量，采用 IPLC 专线定位，适合看重线路连续性、办公与日常流媒体体验的用户。', reviewUrl: '/blog/shunyun-review/', url: 'https://ddd.jichang.best/#/register?code=SWAVvMOV' },
     ],
     faqs: [
       { question: '推荐入口是否包含推广链接？', answer: '是。标有“推广链接”的按钮可能包含本站推广参数；套餐、价格、退款规则与实际可用性均以服务方页面为准。' },
@@ -32,6 +33,10 @@ export default [
     intro: '评测栏目将事实资料、实测记录和主观判断分开呈现。阅读任何结论时，都应同时查看测试日期、地区、运营商、设备、客户端版本和测试时段。',
     highlights: ['注明测试环境', '区分事实与体验', '保留更新与修订记录'],
     entries: [
+      { title: '光年梯测评：本站主推', description: '18 元 120G、IEPL 专线、GNT80 优惠码与适用场景完整分析。', url: '/blog/guangnianti-review/' },
+      { title: '云图机场测评', description: '18 元 100G、IEPL 专线和 yt88 优惠码的优势与限制。', url: '/blog/yuntu-review/' },
+      { title: '鲲鹏加速测评', description: '12 元月付直连机场的价格优势、线路特点和适用人群。', url: '/blog/kunpeng-review/' },
+      { title: '瞬云机场测评', description: '18 元 100G、IPLC 专线和 20OFF 优惠码说明。', url: '/blog/shunyun-review/' },
       { title: '标准评测框架', description: '了解本站如何记录测试环境、线路信息、速度、稳定性和结论边界。', url: '/blog/review-framework/' },
       { title: '机场推荐方法', description: '把服务排行拆解为晚高峰、线路、设备、流量和运营信息五个维度。', url: '/blog/airport-recommendations-2026/' },
       { title: '线路质量判断', description: '避免只看线路名称，学会结合入口、中转、落地和路由表现判断。', url: '/blog/airport-line-types/' },
@@ -184,9 +189,10 @@ export default [
     intro: '品牌资料页的目标不是只放一个注册按钮，而是回答“它是什么、适合谁、有哪些限制、从哪里进入、还需要阅读什么”。推广关系和外部跳转会明确标注。',
     highlights: ['推广关系明确', '资料与教程关联', '保留风险与更新说明'],
     entries: [
-      { title: '光年梯资料入口', description: '查看服务入口及相关选择说明，具体套餐以服务方页面为准。', url: '/airport/#recommendations' },
-      { title: '云图机场资料入口', description: '查看服务入口、推广标注和购买前核验事项。', url: '/airport/#recommendations' },
-      { title: '鲲鹏加速资料入口', description: '查看服务入口、第三方跳转说明和相关教程。', url: '/airport/#recommendations' },
+      { title: '光年梯资料与测评', description: '查看 18 元 120G、IEPL 专线和 GNT80 优惠码说明。', url: '/blog/guangnianti-review/' },
+      { title: '云图机场资料与测评', description: '查看 18 元 100G、IEPL 专线和 yt88 优惠码说明。', url: '/blog/yuntu-review/' },
+      { title: '鲲鹏加速资料与测评', description: '查看 12 元月付直连线路的适用场景与注意事项。', url: '/blog/kunpeng-review/' },
+      { title: '瞬云机场资料与测评', description: '查看 18 元 100G、IPLC 专线和 20OFF 优惠码说明。', url: '/blog/shunyun-review/' },
       { title: 'Clash 客户端资料', description: '了解客户端分支、配置格式、订阅导入和常见错误。', url: '/blog/airport-protocol-client-guide/' },
       { title: 'Shadowrocket 资料', description: '了解 iOS 使用场景、订阅导入与设备安全注意事项。', url: '/blog/airport-device-platform-guide/' },
       { title: 'sing-box 资料', description: '了解协议支持、客户端生态和与订阅格式的关系。', url: '/blog/airport-protocol-client-guide/' },
