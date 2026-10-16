@@ -1,4 +1,5 @@
 import airportKeywords from './airportKeywords.js';
+import aiTools from './aiTools.js';
 
 export default [
   {
@@ -90,9 +91,10 @@ export default [
   },
   {
     slug: 'ai-tools', title: 'AI 工具推荐', eyebrow: 'AI Toolkit', icon: 'bot',
-    description: '从写作、搜索、图像、音视频和效率工作流出发，整理 AI 工具选择方法。',
-    intro: 'AI 工具会快速调整功能、价格和地区政策。本栏目更关注适用任务、输入输出质量、隐私边界、费用结构与替代方案，不把一次体验写成永久结论。',
-    highlights: ['按真实任务分类', '关注隐私与费用', '记录最近核验日期'],
+    description: '按对话、搜索、编程、办公、图片、视频、音频与自动化任务整理常用 AI 工具官方入口。',
+    intro: 'AI 工具会持续调整功能、价格、模型与地区政策。本页按实际任务提供官方入口和简短定位，方便快速查找；打开第三方工具前，仍应核对官网域名、费用、隐私设置与所在地区的可用性。',
+    highlights: ['79 个工具直接打开', '按 8 类真实任务整理', '只连接工具官方入口'],
+    toolGroups: aiTools,
     entries: [
       { title: 'AI 与网络环境', description: '了解地区可用性、IP 质量和连接连续性对 AI 工具访问的影响。', url: '/blog/airport-use-cases/' },
       { title: 'AI 场景选择', description: '区分写作、搜索、研究、图像和自动化任务所需能力。', url: '/ai-tools/#directory' },
