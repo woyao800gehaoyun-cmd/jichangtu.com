@@ -12,7 +12,9 @@
     "build": "npm run clean && npm run build:css && eleventy",
     "start": "npm run dev",
     "check": "eleventy --dryrun",
-    "deploy": "npm run build && wrangler deploy"
+    "deploy": "npm run build && wrangler deploy",
+    "indexnow": "node scripts/indexnow.mjs",
+    "deploy:indexnow": "npm run deploy && npm run indexnow"
   },
   "dependencies": {
     "@11ty/eleventy": "latest",
