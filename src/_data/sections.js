@@ -17,10 +17,11 @@ export default [
     ],
     keywordGroups: airportKeywords,
     providers: [
-      { name: '光年梯', mark: '光', label: '本站主推 · 推广链接', featured: true, price: '¥18 / 月', traffic: '120G / 月', line: 'IEPL 专线', coupon: 'GNT80', description: '18 元月付提供 120G 流量，在四个候选项中流量更充足；IEPL 专线定位适合重视晚高峰连续性、日常视频与多场景使用的读者。', reviewUrl: '/blog/guangnianti-review/', url: 'https://Rumors.gntaff.com/#/?code=Mclks3w5' },
+      { name: '光年梯', mark: '光', label: '本站主推 · 推广链接', featured: true, price: '¥18 / 月', traffic: '120G / 月', line: 'IEPL 专线', coupon: 'GNT80', description: '18 元月付提供 120G 流量，在当前候选项中流量更充足；IEPL 专线定位适合重视晚高峰连续性、日常视频与多场景使用的读者。', reviewUrl: '/blog/guangnianti-review/', url: 'https://Rumors.gntaff.com/#/?code=Mclks3w5' },
       { name: '云图机场', mark: '云', label: '推广链接', price: '¥18 / 月', traffic: '100G / 月', line: 'IEPL 专线', coupon: 'yt88', description: '18 元月付提供 100G 流量，采用 IEPL 专线定位，适合流量需求适中、希望兼顾线路与预算的用户。', reviewUrl: '/blog/yuntu-review/', url: 'https://super.ytjcok.org/#/register?code=COsTypDq' },
       { name: '鲲鹏加速', mark: '鲲', label: '推广链接', price: '¥12 / 月', traffic: '以服务页为准', line: '直连线路', coupon: '暂无', description: '12 元月付，是价格更低的直连机场候选项。优势是入门成本较低，实际高峰表现更依赖所在地与运营商路由。', reviewUrl: '/blog/kunpeng-review/', url: 'https://kunpengjiasu.com/#/register?code=Yd7XpCEQ' },
       { name: '瞬云机场', mark: '瞬', label: '推广链接', price: '¥18 / 月', traffic: '100G / 月', line: 'IPLC 专线', coupon: '20OFF', description: '18 元月付提供 100G 流量，采用 IPLC 专线定位，适合看重线路连续性、办公与日常流媒体体验的用户。', reviewUrl: '/blog/shunyun-review/', url: 'https://ddd.jichang.best/#/register?code=SWAVvMOV' },
+      { name: '边界云', mark: '边', label: '推广链接', price: '¥15 / 月', traffic: '以服务页为准', line: '以服务页为准', coupon: '暂无', description: '15 元月付的机场候选项。当前流量、线路、节点和设备限制请进入服务页面后核验。', url: 'https://www.bianjiecloud.com/r/GCYFYL' },
     ],
     faqs: [
       { question: '推荐入口是否包含推广链接？', answer: '是。标有“推广链接”的按钮可能包含本站推广参数；套餐、价格、退款规则与实际可用性均以服务方页面为准。' },
